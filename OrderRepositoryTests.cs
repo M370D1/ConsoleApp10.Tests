@@ -11,30 +11,32 @@ namespace ConsoleApp10.Tests
         private ProductRepository _productRepository;
         private string _connectionString = ConnectionConfig.DefaultConnection;
         private OrderService _orderService;
+        private ProductService _productService;
 
         [SetUp]
         public void Setup()
         {
             _orderRepository = new OrderRepository(_connectionString);
             _productRepository = new ProductRepository(_connectionString);
+            _productService = new ProductService(_productRepository);
             _orderService = new OrderService(_orderRepository, _productRepository);
         }
 
         [Test]
         public void PlaceOrder_ShouldUpdateStock()
         {
-            
-            var product = new Product { ProductId = 1, Name = "Product1", Stock = 10, Price = 50.0m };
-            var order = new Order { ProductId = 1, Quantity = 2, OrderDate = DateTime.Now };
+            const int productId = 3; // Specify productId that you want to order
+            const int orderQuantity = 2; // Specify order quantity
+            const int quantityLeft = 8; // Specify quantity that will left after the order
 
-            _productRepository.UpdateProduct(product);
+            var newOrder = new Order { ProductId = productId, Quantity = orderQuantity, OrderDate = DateTime.Now };
+            _orderService.PlaceOrder(newOrder);
 
-            
-            _orderService.PlaceOrder(order);
+            var getProductById = _productService.GetProductById(productId);
 
-            
-            var updatedProduct = _productRepository.GetProductById(product.ProductId);
-            Assert.That(6, Is.EqualTo(updatedProduct.Stock)); 
+            Assert.That(quantityLeft, Is.EqualTo(getProductById.Stock));
+
+            _productService.DeleteProduct(productId);
         }
     }
 }
