@@ -14,14 +14,19 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)nunit3testadapter\4.6.0\build\netcoreapp3.1\NUnit3TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)nunit3testadapter\4.6.0\build\netcoreapp3.1\NUnit3TestAdapter.props')" />
+    <Import Project="$(NuGetPackageRoot)nunittestadapter\2.3.0\build\NUnitTestAdapter.props" Condition="Exists('$(NuGetPackageRoot)nunittestadapter\2.3.0\build\NUnitTestAdapter.props')" />
     <Import Project="$(NuGetPackageRoot)nunit\4.3.2\build\NUnit.props" Condition="Exists('$(NuGetPackageRoot)nunit\4.3.2\build\NUnit.props')" />
+    <Import Project="$(NuGetPackageRoot)nunit3testadapter\4.6.0\build\netcoreapp3.1\NUnit3TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)nunit3testadapter\4.6.0\build\netcoreapp3.1\NUnit3TestAdapter.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\Microsoft.TestPlatform.TestHost.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\Microsoft.TestPlatform.TestHost.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\17.8.0\build\netstandard2.0\Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\17.8.0\build\netstandard2.0\Microsoft.CodeCoverage.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNUnitTestAdapter_WithFramework Condition=" '$(PkgNUnitTestAdapter_WithFramework)' == '' ">C:\Users\user\.nuget\packages\nunittestadapter.withframework\2.0.0</PkgNUnitTestAdapter_WithFramework>
+    <PkgNUnitLite Condition=" '$(PkgNUnitLite)' == '' ">C:\Users\user\.nuget\packages\nunitlite\4.3.2</PkgNUnitLite>
+    <PkgNUnit_Extension_NUnitV2Driver Condition=" '$(PkgNUnit_Extension_NUnitV2Driver)' == '' ">C:\Users\user\.nuget\packages\nunit.extension.nunitv2driver\3.9.0</PkgNUnit_Extension_NUnitV2Driver>
+    <PkgNUnit_Extension_NUnitProjectLoader Condition=" '$(PkgNUnit_Extension_NUnitProjectLoader)' == '' ">C:\Users\user\.nuget\packages\nunit.extension.nunitprojectloader\3.8.0</PkgNUnit_Extension_NUnitProjectLoader>
     <PkgNUnit_ConsoleRunner Condition=" '$(PkgNUnit_ConsoleRunner)' == '' ">C:\Users\user\.nuget\packages\nunit.consolerunner\3.19.0</PkgNUnit_ConsoleRunner>
-    <PkgNUnit_Analyzers Condition=" '$(PkgNUnit_Analyzers)' == '' ">C:\Users\user\.nuget\packages\nunit.analyzers\3.9.0</PkgNUnit_Analyzers>
+    <PkgNUnit_Analyzers Condition=" '$(PkgNUnit_Analyzers)' == '' ">C:\Users\user\.nuget\packages\nunit.analyzers\4.6.0</PkgNUnit_Analyzers>
   </PropertyGroup>
 </Project>

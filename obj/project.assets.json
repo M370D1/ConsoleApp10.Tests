@@ -63,6 +63,19 @@
           }
         }
       },
+      "CompareNETObjects/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/KellermanSoftware.Compare-NET-Objects-Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/KellermanSoftware.Compare-NET-Objects-Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "coverlet.collector/6.0.0": {
         "type": "package",
         "build": {
@@ -635,6 +648,21 @@
           "lib/net6.0/Moq.dll": {}
         }
       },
+      "NETStandard.Library/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -679,16 +707,99 @@
           "build/NUnit.props": {}
         }
       },
-      "NUnit.Analyzers/3.9.0": {
+      "NUnit.Analyzers/4.6.0": {
         "type": "package"
       },
       "NUnit.ConsoleRunner/3.19.0": {
+        "type": "package"
+      },
+      "NUnit.DeepObjectCompare/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "CompareNETObjects": "4.0.0",
+          "NUnit": "3.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NUnit.DeepObjectCompare.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NUnit.DeepObjectCompare.dll": {}
+        }
+      },
+      "NUnit.Engine/3.19.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {},
+          "lib/net8.0/nunit.engine.api.dll": {},
+          "lib/net8.0/nunit.engine.core.dll": {},
+          "lib/net8.0/nunit.engine.dll": {},
+          "lib/net8.0/testcentric.engine.metadata.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {},
+          "lib/net8.0/nunit.engine.api.dll": {},
+          "lib/net8.0/nunit.engine.core.dll": {},
+          "lib/net8.0/nunit.engine.dll": {},
+          "lib/net8.0/testcentric.engine.metadata.dll": {}
+        }
+      },
+      "NUnit.Engine.Api/3.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/nunit.engine.api.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.engine.api.dll": {}
+        }
+      },
+      "NUnit.Extension.NUnitProjectLoader/3.8.0": {
+        "type": "package"
+      },
+      "NUnit.Extension.NUnitV2Driver/3.9.0": {
         "type": "package"
       },
       "NUnit3TestAdapter/4.6.0": {
         "type": "package",
         "build": {
           "build/netcoreapp3.1/NUnit3TestAdapter.props": {}
+        }
+      },
+      "NUnitLite/4.3.2": {
+        "type": "package",
+        "dependencies": {
+          "NUnit": "[4.3.2]"
+        },
+        "compile": {
+          "lib/net8.0/nunitlite.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/nunitlite.dll": {}
+        }
+      },
+      "NUnitTestAdapter/2.3.0": {
+        "type": "package",
+        "build": {
+          "build/NUnitTestAdapter.props": {}
+        }
+      },
+      "NUnitTestAdapter.WithFramework/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/NUnit.VisualStudio.TestAdapter.dll": {},
+          "lib/nunit.core.dll": {},
+          "lib/nunit.core.interfaces.dll": {},
+          "lib/nunit.framework.dll": {},
+          "lib/nunit.util.dll": {}
+        },
+        "runtime": {
+          "lib/NUnit.VisualStudio.TestAdapter.dll": {},
+          "lib/nunit.core.dll": {},
+          "lib/nunit.core.interfaces.dll": {},
+          "lib/nunit.framework.dll": {},
+          "lib/nunit.util.dll": {}
         }
       },
       "System.ClientModel/1.0.0": {
@@ -980,7 +1091,15 @@
           "Moq": "4.20.72",
           "NUnit": "4.3.2",
           "NUnit.ConsoleRunner": "3.19.0",
-          "NUnit3TestAdapter": "4.6.0"
+          "NUnit.DeepObjectCompare": "2.0.1",
+          "NUnit.Engine": "3.19.0",
+          "NUnit.Engine.Api": "3.19.0",
+          "NUnit.Extension.NUnitProjectLoader": "3.8.0",
+          "NUnit.Extension.NUnitV2Driver": "3.9.0",
+          "NUnit3TestAdapter": "4.6.0",
+          "NUnitLite": "4.3.2",
+          "NUnitTestAdapter": "2.3.0",
+          "NUnitTestAdapter.WithFramework": "2.0.0"
         },
         "compile": {
           "bin/placeholder/ConsoleApp10.dll": {}
@@ -1051,6 +1170,33 @@
         "lib/netstandard2.0/Castle.Core.xml",
         "lib/netstandard2.1/Castle.Core.dll",
         "lib/netstandard2.1/Castle.Core.xml",
+        "readme.txt"
+      ]
+    },
+    "CompareNETObjects/4.0.0": {
+      "sha512": "PAL94kv1YDeCMvmX4Q6EPMDF12LltdRmqjThFd9yWjN3FTXcmEe2wDHKkcjCGcyDO2Ln07J/16WvC8XEaVu5QA==",
+      "type": "package",
+      "path": "comparenetobjects/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/AppReadme/Compare-NET-Objects-Help.txt",
+        "comparenetobjects.4.0.0.nupkg.sha512",
+        "comparenetobjects.nuspec",
+        "lib/net40/KellermanSoftware.Compare-NET-Objects.dll",
+        "lib/net40/KellermanSoftware.Compare-NET-Objects.xml",
+        "lib/net45/KellermanSoftware.Compare-NET-Objects.dll",
+        "lib/net45/KellermanSoftware.Compare-NET-Objects.xml",
+        "lib/net451/KellermanSoftware.Compare-NET-Objects.dll",
+        "lib/net451/KellermanSoftware.Compare-NET-Objects.xml",
+        "lib/net452/KellermanSoftware.Compare-NET-Objects.dll",
+        "lib/net452/KellermanSoftware.Compare-NET-Objects.xml",
+        "lib/net46/KellermanSoftware.Compare-NET-Objects.dll",
+        "lib/net46/KellermanSoftware.Compare-NET-Objects.xml",
+        "lib/netstandard1.3/KellermanSoftware.Compare-NET-Objects-Core.dll",
+        "lib/netstandard1.3/KellermanSoftware.Compare-NET-Objects-Core.xml",
+        "lib/portable-net40+sl5+win8+wp8/KellermanSoftware.Compare-NET-Objects-Portable.dll",
+        "lib/portable-net40+sl5+win8+wp8/KellermanSoftware.Compare-NET-Objects-Portable.xml",
         "readme.txt"
       ]
     },
@@ -1807,6 +1953,136 @@
         "readme.md"
       ]
     },
+    "NETStandard.Library/2.0.0": {
+      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "type": "package",
+      "path": "netstandard.library/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/NETStandard.Library.targets",
+        "build/netstandard2.0/NETStandard.Library.targets",
+        "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
+        "build/netstandard2.0/ref/System.AppContext.dll",
+        "build/netstandard2.0/ref/System.Collections.Concurrent.dll",
+        "build/netstandard2.0/ref/System.Collections.NonGeneric.dll",
+        "build/netstandard2.0/ref/System.Collections.Specialized.dll",
+        "build/netstandard2.0/ref/System.Collections.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Composition.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.EventBasedAsync.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Primitives.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.TypeConverter.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.dll",
+        "build/netstandard2.0/ref/System.Console.dll",
+        "build/netstandard2.0/ref/System.Core.dll",
+        "build/netstandard2.0/ref/System.Data.Common.dll",
+        "build/netstandard2.0/ref/System.Data.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Contracts.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Debug.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.FileVersionInfo.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Process.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.StackTrace.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TextWriterTraceListener.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tools.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TraceSource.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tracing.dll",
+        "build/netstandard2.0/ref/System.Drawing.Primitives.dll",
+        "build/netstandard2.0/ref/System.Drawing.dll",
+        "build/netstandard2.0/ref/System.Dynamic.Runtime.dll",
+        "build/netstandard2.0/ref/System.Globalization.Calendars.dll",
+        "build/netstandard2.0/ref/System.Globalization.Extensions.dll",
+        "build/netstandard2.0/ref/System.Globalization.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.ZipFile.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.DriveInfo.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Watcher.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.IsolatedStorage.dll",
+        "build/netstandard2.0/ref/System.IO.MemoryMappedFiles.dll",
+        "build/netstandard2.0/ref/System.IO.Pipes.dll",
+        "build/netstandard2.0/ref/System.IO.UnmanagedMemoryStream.dll",
+        "build/netstandard2.0/ref/System.IO.dll",
+        "build/netstandard2.0/ref/System.Linq.Expressions.dll",
+        "build/netstandard2.0/ref/System.Linq.Parallel.dll",
+        "build/netstandard2.0/ref/System.Linq.Queryable.dll",
+        "build/netstandard2.0/ref/System.Linq.dll",
+        "build/netstandard2.0/ref/System.Net.Http.dll",
+        "build/netstandard2.0/ref/System.Net.NameResolution.dll",
+        "build/netstandard2.0/ref/System.Net.NetworkInformation.dll",
+        "build/netstandard2.0/ref/System.Net.Ping.dll",
+        "build/netstandard2.0/ref/System.Net.Primitives.dll",
+        "build/netstandard2.0/ref/System.Net.Requests.dll",
+        "build/netstandard2.0/ref/System.Net.Security.dll",
+        "build/netstandard2.0/ref/System.Net.Sockets.dll",
+        "build/netstandard2.0/ref/System.Net.WebHeaderCollection.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.Client.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.dll",
+        "build/netstandard2.0/ref/System.Net.dll",
+        "build/netstandard2.0/ref/System.Numerics.dll",
+        "build/netstandard2.0/ref/System.ObjectModel.dll",
+        "build/netstandard2.0/ref/System.Reflection.Extensions.dll",
+        "build/netstandard2.0/ref/System.Reflection.Primitives.dll",
+        "build/netstandard2.0/ref/System.Reflection.dll",
+        "build/netstandard2.0/ref/System.Resources.Reader.dll",
+        "build/netstandard2.0/ref/System.Resources.ResourceManager.dll",
+        "build/netstandard2.0/ref/System.Resources.Writer.dll",
+        "build/netstandard2.0/ref/System.Runtime.CompilerServices.VisualC.dll",
+        "build/netstandard2.0/ref/System.Runtime.Extensions.dll",
+        "build/netstandard2.0/ref/System.Runtime.Handles.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.dll",
+        "build/netstandard2.0/ref/System.Runtime.Numerics.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Formatters.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Json.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Xml.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.dll",
+        "build/netstandard2.0/ref/System.Runtime.dll",
+        "build/netstandard2.0/ref/System.Security.Claims.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Algorithms.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Csp.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Encoding.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Primitives.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.X509Certificates.dll",
+        "build/netstandard2.0/ref/System.Security.Principal.dll",
+        "build/netstandard2.0/ref/System.Security.SecureString.dll",
+        "build/netstandard2.0/ref/System.ServiceModel.Web.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.Extensions.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.dll",
+        "build/netstandard2.0/ref/System.Text.RegularExpressions.dll",
+        "build/netstandard2.0/ref/System.Threading.Overlapped.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.Parallel.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.dll",
+        "build/netstandard2.0/ref/System.Threading.Thread.dll",
+        "build/netstandard2.0/ref/System.Threading.ThreadPool.dll",
+        "build/netstandard2.0/ref/System.Threading.Timer.dll",
+        "build/netstandard2.0/ref/System.Threading.dll",
+        "build/netstandard2.0/ref/System.Transactions.dll",
+        "build/netstandard2.0/ref/System.ValueTuple.dll",
+        "build/netstandard2.0/ref/System.Web.dll",
+        "build/netstandard2.0/ref/System.Windows.dll",
+        "build/netstandard2.0/ref/System.Xml.Linq.dll",
+        "build/netstandard2.0/ref/System.Xml.ReaderWriter.dll",
+        "build/netstandard2.0/ref/System.Xml.Serialization.dll",
+        "build/netstandard2.0/ref/System.Xml.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlSerializer.dll",
+        "build/netstandard2.0/ref/System.Xml.dll",
+        "build/netstandard2.0/ref/System.dll",
+        "build/netstandard2.0/ref/mscorlib.dll",
+        "build/netstandard2.0/ref/netstandard.dll",
+        "build/netstandard2.0/ref/netstandard.xml",
+        "lib/netstandard1.0/_._",
+        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -1878,10 +2154,10 @@
         "nunit.nuspec"
       ]
     },
-    "NUnit.Analyzers/3.9.0": {
-      "sha512": "8bGAEljlBnzR+uU8oGQhTVKnbgBw1Mo71qjVkgzHdvtUkiB5XOIDyjAcS4KUo/j+F2Zv/xBUZRkCWXmejx4bfA==",
+    "NUnit.Analyzers/4.6.0": {
+      "sha512": "uK1TEViVBugOO6uDou1amu7CoNhrd2sEUFr/iaEmVfoeY8qq/zzWCCUZi97aCCSZmjnHKCCWKh3RucU27qPlKg==",
       "type": "package",
-      "path": "nunit.analyzers/3.9.0",
+      "path": "nunit.analyzers/4.6.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1890,7 +2166,7 @@
         "docs/README.md",
         "images/nunit_256.png",
         "license.txt",
-        "nunit.analyzers.3.9.0.nupkg.sha512",
+        "nunit.analyzers.4.6.0.nupkg.sha512",
         "nunit.analyzers.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
@@ -1962,6 +2238,115 @@
         "tools/testcentric.engine.metadata.dll"
       ]
     },
+    "NUnit.DeepObjectCompare/2.0.1": {
+      "sha512": "qTUlGaCoxGiYyeGiqSWjHtTqhTn12DjwgS24vOP9kFDqIjC797vZpC42cv0PWxxsBN+GZjWpLwn3dTNiqmwu+A==",
+      "type": "package",
+      "path": "nunit.deepobjectcompare/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net45/NUnit.DeepObjectCompare.dll",
+        "lib/net452/NUnit.DeepObjectCompare.dll",
+        "lib/net46/NUnit.DeepObjectCompare.dll",
+        "lib/net461/NUnit.DeepObjectCompare.dll",
+        "lib/net462/NUnit.DeepObjectCompare.dll",
+        "lib/netstandard1.6/NUnit.DeepObjectCompare.dll",
+        "lib/netstandard2.0/NUnit.DeepObjectCompare.dll",
+        "nunit.deepobjectcompare.2.0.1.nupkg.sha512",
+        "nunit.deepobjectcompare.nuspec",
+        "nunit.png"
+      ]
+    },
+    "NUnit.Engine/3.19.0": {
+      "sha512": "5jdVlOrfQT6DyrQGsa9E1+CEEKV8AGpgEBSAvwOKZKDLac93/fj8Higolj+todYvJ6esyeiFgPI6ICy9I2ghtw==",
+      "type": "package",
+      "path": "nunit.engine/3.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "contentFiles/any/agents/net462/nunit-agent-x86.exe",
+        "contentFiles/any/agents/net462/nunit-agent-x86.exe.config",
+        "contentFiles/any/agents/net462/nunit-agent.exe",
+        "contentFiles/any/agents/net462/nunit-agent.exe.config",
+        "contentFiles/any/agents/net462/nunit.engine.api.dll",
+        "contentFiles/any/agents/net462/nunit.engine.core.dll",
+        "contentFiles/any/agents/net462/testcentric.engine.metadata.dll",
+        "contentFiles/any/agents/netcoreapp3.1/nunit-agent.deps.json",
+        "contentFiles/any/agents/netcoreapp3.1/nunit-agent.dll",
+        "contentFiles/any/agents/netcoreapp3.1/nunit-agent.dll.config",
+        "contentFiles/any/agents/netcoreapp3.1/nunit-agent.runtimeconfig.json",
+        "contentFiles/any/agents/netcoreapp3.1/nunit.engine.api.dll",
+        "contentFiles/any/agents/netcoreapp3.1/nunit.engine.core.dll",
+        "contentFiles/any/agents/netcoreapp3.1/testcentric.engine.metadata.dll",
+        "images/nunit_256.png",
+        "lib/net462/nunit.engine.api.dll",
+        "lib/net462/nunit.engine.core.dll",
+        "lib/net462/nunit.engine.dll",
+        "lib/net462/testcentric.engine.metadata.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyModel.dll",
+        "lib/net8.0/nunit.engine.api.dll",
+        "lib/net8.0/nunit.engine.core.dll",
+        "lib/net8.0/nunit.engine.dll",
+        "lib/net8.0/testcentric.engine.metadata.dll",
+        "nunit.engine.3.19.0.nupkg.sha512",
+        "nunit.engine.nuspec"
+      ]
+    },
+    "NUnit.Engine.Api/3.19.0": {
+      "sha512": "flkrSLHZogCGELoJA2aii2a/+3GlzmpmBc6Hf+7ghAPuQZ6PfmpXXXS20RzBROLCvQwKNslqlowlTKL2Yz8YjQ==",
+      "type": "package",
+      "path": "nunit.engine.api/3.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "images/nunit_256.png",
+        "lib/net462/nunit.engine.api.dll",
+        "lib/netstandard2.0/nunit.engine.api.dll",
+        "nunit.engine.api.3.19.0.nupkg.sha512",
+        "nunit.engine.api.nuspec"
+      ]
+    },
+    "NUnit.Extension.NUnitProjectLoader/3.8.0": {
+      "sha512": "luFf2sI7Nw6qc3GTm7rcQKqrrp1uGp5z8USUu6CjfjYg6Pwo1TCS0WsaBHA1afmHDT7WJuuJ1dzAMdEDUm8UdQ==",
+      "type": "package",
+      "path": "nunit.extension.nunitprojectloader/3.8.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "nunit.extension.nunitprojectloader.3.8.0.nupkg.sha512",
+        "nunit.extension.nunitprojectloader.nuspec",
+        "nunit_256.png",
+        "tools/net462/nunit-project-loader.dll",
+        "tools/net462/nunit.engine.api.dll",
+        "tools/net6.0/nunit-project-loader.dll",
+        "tools/net6.0/nunit.engine.api.dll",
+        "tools/nunit-project-loader.legacy.addins"
+      ]
+    },
+    "NUnit.Extension.NUnitV2Driver/3.9.0": {
+      "sha512": "h4sqAl2dBh+PpClkYB5cCkfDtTitC0sZeFEf6j0Bmk8yrc8lN7dpQ67QFnlf0FnyspI409QVf6uM+7gPXzJ8+w==",
+      "type": "package",
+      "path": "nunit.extension.nunitv2driver/3.9.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.txt",
+        "LICENSE.txt",
+        "nunit.extension.nunitv2driver.3.9.0.nupkg.sha512",
+        "nunit.extension.nunitv2driver.nuspec",
+        "tools/nunit.core.dll",
+        "tools/nunit.core.interfaces.dll",
+        "tools/nunit.v2.driver.addins",
+        "tools/nunit.v2.driver.dll"
+      ]
+    },
     "NUnit3TestAdapter/4.6.0": {
       "sha512": "R7e1+a4vuV/YS+ItfL7f//rG+JBvVeVLX4mHzFEZo4W1qEKl8Zz27AqvQSAqo+BtIzUCo4aAJMYa56VXS4hudw==",
       "type": "package",
@@ -1987,6 +2372,66 @@
         "nunit3testadapter.4.6.0.nupkg.sha512",
         "nunit3testadapter.nuspec",
         "nunit_256.png"
+      ]
+    },
+    "NUnitLite/4.3.2": {
+      "sha512": "fPZm5HuS5zqiH/cIWxQfuwBiqRFFvtYkaAE11autStCTZS1X7D/JUEkvYTRnR4iVDB+EqHfIWRX9EzIUPTooSQ==",
+      "type": "package",
+      "path": "nunitlite/4.3.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NOTICES.md",
+        "THIRD_PARTY_NOTICES.md",
+        "icon.png",
+        "lib/net462/nunitlite.dll",
+        "lib/net6.0/nunitlite.dll",
+        "lib/net8.0/nunitlite.dll",
+        "nunitlite.4.3.2.nupkg.sha512",
+        "nunitlite.nuspec",
+        "tools/net462/nunitlite-runner.exe"
+      ]
+    },
+    "NUnitTestAdapter/2.3.0": {
+      "sha512": "I45o6jTH2CY5z8LtflmJn5DsFhzcDxjDlSm3NE6CUsc9Ms8nvA+1wqRmcXpu7uV3IcGK8mSHVr9nBwDbL8jw4A==",
+      "type": "package",
+      "path": "nunittestadapter/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/Mono.Cecil.Mdb.dll",
+        "build/Mono.Cecil.Pdb.dll",
+        "build/Mono.Cecil.Rocks.dll",
+        "build/Mono.Cecil.dll",
+        "build/NUnit.VisualStudio.TestAdapter.dll",
+        "build/NUnitTestAdapter.props",
+        "build/nunit.core.dll",
+        "build/nunit.core.interfaces.dll",
+        "build/nunit.util.dll",
+        "nunittestadapter.2.3.0.nupkg.sha512",
+        "nunittestadapter.nuspec"
+      ]
+    },
+    "NUnitTestAdapter.WithFramework/2.0.0": {
+      "sha512": "K4c5RuLsj6jybgVt9QV/sm3F0vBvLLMoxFK0dj1vhP3R4JhRE8OMkMBu6M8NAGkBwykZUCxvZIyZCsXRd3DVDg==",
+      "type": "package",
+      "path": "nunittestadapter.withframework/2.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/NUnit.VisualStudio.TestAdapter.dll",
+        "lib/nunit.core.dll",
+        "lib/nunit.core.interfaces.dll",
+        "lib/nunit.framework.dll",
+        "lib/nunit.framework.xml",
+        "lib/nunit.util.dll",
+        "nunittestadapter.withframework.2.0.0.nupkg.sha512",
+        "nunittestadapter.withframework.nuspec",
+        "tools/install.ps1"
       ]
     },
     "System.ClientModel/1.0.0": {
@@ -2651,9 +3096,17 @@
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "Moq >= 4.20.72",
       "NUnit >= 4.3.2",
-      "NUnit.Analyzers >= 3.9.0",
+      "NUnit.Analyzers >= 4.6.0",
       "NUnit.ConsoleRunner >= 3.19.0",
+      "NUnit.DeepObjectCompare >= 2.0.1",
+      "NUnit.Engine >= 3.19.0",
+      "NUnit.Engine.Api >= 3.19.0",
+      "NUnit.Extension.NUnitProjectLoader >= 3.8.0",
+      "NUnit.Extension.NUnitV2Driver >= 3.9.0",
       "NUnit3TestAdapter >= 4.6.0",
+      "NUnitLite >= 4.3.2",
+      "NUnitTestAdapter >= 2.3.0",
+      "NUnitTestAdapter.WithFramework >= 2.0.0",
       "coverlet.collector >= 6.0.0"
     ]
   },
@@ -2725,16 +3178,50 @@
             "version": "[4.3.2, )"
           },
           "NUnit.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[3.9.0, )"
+            "version": "[4.6.0, )"
           },
           "NUnit.ConsoleRunner": {
             "target": "Package",
             "version": "[3.19.0, )"
           },
+          "NUnit.DeepObjectCompare": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
+          "NUnit.Engine": {
+            "target": "Package",
+            "version": "[3.19.0, )"
+          },
+          "NUnit.Engine.Api": {
+            "target": "Package",
+            "version": "[3.19.0, )"
+          },
+          "NUnit.Extension.NUnitProjectLoader": {
+            "target": "Package",
+            "version": "[3.8.0, )"
+          },
+          "NUnit.Extension.NUnitV2Driver": {
+            "target": "Package",
+            "version": "[3.9.0, )"
+          },
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[4.6.0, )"
+          },
+          "NUnitLite": {
+            "target": "Package",
+            "version": "[4.3.2, )"
+          },
+          "NUnitTestAdapter": {
+            "target": "Package",
+            "version": "[2.3.0, )"
+          },
+          "NUnitTestAdapter.WithFramework": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "coverlet.collector": {
             "target": "Package",
@@ -2760,5 +3247,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NUnitTestAdapter.WithFramework 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NUnitTestAdapter.WithFramework",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

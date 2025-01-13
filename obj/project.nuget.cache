@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "iaoY+mpOics=",
+  "dgSpecHash": "Bvqt57nZGyg=",
   "success": true,
   "projectFilePath": "D:\\Automation_QA\\ConsoleApp10.Tests\\ConsoleApp10.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\comparenetobjects\\4.0.0\\comparenetobjects.4.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
@@ -28,12 +29,21 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.testplatform.testhost\\17.8.0\\microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\moq\\4.20.72\\moq.4.20.72.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\nuget.frameworks\\6.5.0\\nuget.frameworks.6.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\nunit\\4.3.2\\nunit.4.3.2.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\nunit.analyzers\\3.9.0\\nunit.analyzers.3.9.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunit.analyzers\\4.6.0\\nunit.analyzers.4.6.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\nunit.consolerunner\\3.19.0\\nunit.consolerunner.3.19.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunit.deepobjectcompare\\2.0.1\\nunit.deepobjectcompare.2.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunit.engine\\3.19.0\\nunit.engine.3.19.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunit.engine.api\\3.19.0\\nunit.engine.api.3.19.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunit.extension.nunitprojectloader\\3.8.0\\nunit.extension.nunitprojectloader.3.8.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunit.extension.nunitv2driver\\3.9.0\\nunit.extension.nunitv2driver.3.9.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\nunit3testadapter\\4.6.0\\nunit3testadapter.4.6.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunitlite\\4.3.2\\nunitlite.4.3.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunittestadapter\\2.3.0\\nunittestadapter.2.3.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\nunittestadapter.withframework\\2.0.0\\nunittestadapter.withframework.2.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
@@ -53,5 +63,16 @@
     "C:\\Users\\user\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'NUnitTestAdapter.WithFramework 2.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "NUnitTestAdapter.WithFramework",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

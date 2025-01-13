@@ -146,3 +146,15 @@ D:\Automation_QA\ConsoleApp10.Tests\obj\Debug\net8.0\refint\ConsoleApp10.Tests.d
 D:\Automation_QA\ConsoleApp10.Tests\obj\Debug\net8.0\ConsoleApp10.Tests.pdb
 D:\Automation_QA\ConsoleApp10.Tests\obj\Debug\net8.0\ConsoleApp10.Tests.genruntimeconfig.cache
 D:\Automation_QA\ConsoleApp10.Tests\obj\Debug\net8.0\ref\ConsoleApp10.Tests.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\NUnit.VisualStudio.TestAdapter.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\Mono.Cecil.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\Mono.Cecil.Mdb.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\Mono.Cecil.Pdb.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\Mono.Cecil.Rocks.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\nunit.core.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\nunit.core.interfaces.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\nunit.util.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\KellermanSoftware.Compare-NET-Objects-Core.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\NUnit.DeepObjectCompare.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Automation_QA\ConsoleApp10.Tests\bin\Debug\net8.0\nunitlite.dll

@@ -68,16 +68,50 @@
               "version": "[4.3.2, )"
             },
             "NUnit.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.9.0, )"
+              "version": "[4.6.0, )"
             },
             "NUnit.ConsoleRunner": {
               "target": "Package",
               "version": "[3.19.0, )"
             },
+            "NUnit.DeepObjectCompare": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "NUnit.Engine": {
+              "target": "Package",
+              "version": "[3.19.0, )"
+            },
+            "NUnit.Engine.Api": {
+              "target": "Package",
+              "version": "[3.19.0, )"
+            },
+            "NUnit.Extension.NUnitProjectLoader": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
+            "NUnit.Extension.NUnitV2Driver": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.6.0, )"
+            },
+            "NUnitLite": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            },
+            "NUnitTestAdapter": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "NUnitTestAdapter.WithFramework": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -163,13 +197,51 @@
               "target": "Package",
               "version": "[4.3.2, )"
             },
+            "NUnit.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
             "NUnit.ConsoleRunner": {
               "target": "Package",
               "version": "[3.19.0, )"
             },
+            "NUnit.DeepObjectCompare": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "NUnit.Engine": {
+              "target": "Package",
+              "version": "[3.19.0, )"
+            },
+            "NUnit.Engine.Api": {
+              "target": "Package",
+              "version": "[3.19.0, )"
+            },
+            "NUnit.Extension.NUnitProjectLoader": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
+            "NUnit.Extension.NUnitV2Driver": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.6.0, )"
+            },
+            "NUnitLite": {
+              "target": "Package",
+              "version": "[4.3.2, )"
+            },
+            "NUnitTestAdapter": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "NUnitTestAdapter.WithFramework": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [
